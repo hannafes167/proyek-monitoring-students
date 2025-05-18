@@ -51,6 +51,7 @@ Business dashboard dibuat untuk membantu tim akademik dan manajemen dalam memant
 - Pekerjaan orang tua (ayah)
 - Nilai kurikulum semester 1
 - Tingkat pengangguran dan GDP
+  
 [Link Dashboard Looker Studio] https://lookerstudio.google.com/reporting/5d6d63d5-3e32-4efd-91fe-b9405c702d85)
 
 ## Menjalankan Sistem Machine Learning
