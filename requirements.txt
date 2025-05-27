@@ -1,0 +1,7 @@
+gdown
+pandas
+scikit-learn
+google-colab
+seaborn
+matplotlib
+joblib
