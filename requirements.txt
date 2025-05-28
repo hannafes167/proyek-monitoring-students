@@ -1,7 +1,6 @@
-gdown
+streamlit
 pandas
 scikit-learn
-google-colab
-seaborn
-matplotlib
 joblib
+matplotlib
+seaborn
