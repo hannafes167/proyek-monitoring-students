@@ -21,7 +21,7 @@ Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar un
 
 3. Mengembangkan prototype visualisasi dalam bentuk business dashboard menggunakan Looker Studio.
 
-4. Memberikan insight dan rekomendasi berdasarkan hasil analisis data dan prediksi.
+4. Memberikan insight dan rekomendasi berdasarkan hasil analisis dan prediksi model.
 
 ### Persiapan
 
@@ -29,11 +29,13 @@ Sumber data: Dataset berasal dari sumber terbuka dengan judul "Students Performa
 
 Setup environment:
 ```
-- Python (Pandas, Scikit-learn, Matplotlib, Seaborn)
+- Python: pandas, scikit-learn, matplotlib, seaborn, joblib
 
-- Google Looker Studio untuk pembuatan dashboard
+- Google Colab: pemrosesan data & pelatihan model
 
-- Google Colab untuk pemrosesan data dan pengembangan model machine learning
+- Streamlit: prototipe sistem prediksi
+
+- Looker Studio: visualisasi dashboard interaktif
 
 
 ```
@@ -45,33 +47,32 @@ Business dashboard dibuat untuk membantu tim akademik dan manajemen dalam memant
 - Jumlah total mahasiswa
 - Jumlah mahasiswa berdasarkan status: Dropout, Enrolled, Graduate
 - Persentase dropout
-- Dropout berdasarkan usia
-- Hubungan antara status mahasiswa dengan faktor-faktor seperti:
-- Grade saat admission
-- Pekerjaan orang tua (ayah)
-- Nilai kurikulum semester 1
-- Tingkat pengangguran dan GDP
+- Berdasarkan status pembayaran kuliah
+- Berdasarkan nilai saat penerimaan (admission grade)
+- Berdasarkan usia saat masuk
+- Berdasarkan nilai kurikulum semester 1 dan 2
+- Berdasarkan kualifikasi pendidikan sebelumnya
   
-[Link Dashboard Looker Studio] https://lookerstudio.google.com/reporting/5d6d63d5-3e32-4efd-91fe-b9405c702d85)
+[Link Dashboard Looker Studio] https://lookerstudio.google.com/reporting/4b31e782-cb8d-41ef-8363-4cde65037501)
 
 ## Menjalankan Sistem Machine Learning
-Sistem machine learning dibangun menggunakan algoritma klasifikasi (contohnya: Random Forest). Model dilatih untuk memprediksi kemungkinan mahasiswa dropout berdasarkan beberapa fitur terpilih, seperti nilai akademik, latar belakang keluarga, dan kondisi ekonomi makro.
+Sistem klasifikasi ini dibangun menggunakan algoritma Random Forest. Model dilatih menggunakan fitur terpilih seperti nilai akademik, latar belakang sosial, dan status keuangan mahasiswa untuk memprediksi risiko dropout.
 
 1. Memastikan Python dan pustaka berikut sudah terpasang:
 
  ```
 pip install pandas scikit-learn joblib
 ```
-2. Menjalankan predict.py
-
-3. Output dashboard_data
+2. di environment Python lokal atau Colab.
+   
+3. Implementasikan ke Streamlit untuk pengujian berbasis web.
+   
+4. Gunakan output dashboard_data.csv sebagai sumber data untuk dashboard Looker Studio.
 
 [Link Prototype (https://colab.research.google.com/drive/1XtH37fgp-T1WdC_feIlttKv-9G0n-Su3?usp=sharing)]
 
 ## Conclusion
-Proyek ini berhasil mengidentifikasi fitur-fitur penting yang berkontribusi terhadap risiko dropout mahasiswa, serta membangun sistem prediksi menggunakan machine learning. Selain itu, dashboard interaktif juga telah dibuat untuk memudahkan pemantauan dan pengambilan keputusan.
-
-Model yang dibangun dapat dijadikan alat bantu untuk mendeteksi mahasiswa yang memerlukan perhatian lebih, sehingga pihak institusi dapat melakukan tindakan pencegahan sedini mungkin.
+Proyek ini berhasil membangun sistem prediksi mahasiswa dropout menggunakan machine learning serta mengembangkan dashboard interaktif untuk pemantauan kondisi mahasiswa. Hasil analisis menunjukkan bahwa nilai akademik dan kondisi keuangan merupakan faktor dominan dalam risiko dropout.
 
 ### Rekomendasi Action Items
 1. Implementasi sistem deteksi dini berbasis data untuk memantau mahasiswa berisiko tinggi dropout, terutama berdasarkan nilai semester awal dan kondisi keluarga.
