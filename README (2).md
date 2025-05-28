@@ -71,6 +71,18 @@ pip install pandas scikit-learn joblib
 
 [Link Prototype (https://colab.research.google.com/drive/1XtH37fgp-T1WdC_feIlttKv-9G0n-Su3?usp=sharing)]
 
+## Streamlit
+Untuk memudahkan eksplorasi hasil model machine learning yang telah dikembangkan, kami menyediakan aplikasi interaktif berbasis Streamlit. Aplikasi ini memungkinkan pengguna untuk:
+
+Melakukan prediksi kemungkinan mahasiswa dropout
+
+Melihat fitur-fitur yang paling berpengaruh terhadap dropout
+
+Mengunduh hasil prediksi dalam format yang dapat digunakan lebih lanjut
+
+Silakan akses aplikasi melalui tautan berikut: https://proyek-monitoring-students-7qcnfjyxcus2wd5csaxy7u.streamlit.app/
+
+👉 Coba Aplikasinya di Sini
 ## Conclusion
 Proyek ini berhasil membangun sistem prediksi mahasiswa dropout menggunakan machine learning serta mengembangkan dashboard interaktif untuk pemantauan kondisi mahasiswa. Hasil analisis menunjukkan bahwa nilai akademik dan kondisi keuangan merupakan faktor dominan dalam risiko dropout.
 
