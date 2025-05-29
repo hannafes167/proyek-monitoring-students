@@ -53,7 +53,7 @@ Business dashboard dibuat untuk membantu tim akademik dan manajemen dalam memant
 - Berdasarkan nilai kurikulum semester 1 dan 2
 - Berdasarkan kualifikasi pendidikan sebelumnya
   
-[Link Dashboard Looker Studio] https://lookerstudio.google.com/reporting/4b31e782-cb8d-41ef-8363-4cde65037501)
+[Link Dashboard Looker Studio (https://lookerstudio.google.com/reporting/4b31e782-cb8d-41ef-8363-4cde65037501)]
 
 ## Menjalankan Sistem Machine Learning
 Sistem klasifikasi ini dibangun menggunakan algoritma Random Forest. Model dilatih menggunakan fitur terpilih seperti nilai akademik, latar belakang sosial, dan status keuangan mahasiswa untuk memprediksi risiko dropout.
@@ -80,9 +80,8 @@ Melihat fitur-fitur yang paling berpengaruh terhadap dropout
 
 Mengunduh hasil prediksi dalam format yang dapat digunakan lebih lanjut
 
-Silakan akses aplikasi melalui tautan berikut: https://proyek-monitoring-students-7qcnfjyxcus2wd5csaxy7u.streamlit.app/
+Silakan akses aplikasi melalui tautan berikut: (https://proyek-monitoring-students-7qcnfjyxcus2wd5csaxy7u.streamlit.app/)
 
-👉 Coba Aplikasinya di Sini
 ## Conclusion
 Proyek ini berhasil membangun sistem prediksi mahasiswa dropout menggunakan machine learning serta mengembangkan dashboard interaktif untuk pemantauan kondisi mahasiswa. Hasil analisis menunjukkan bahwa nilai akademik dan kondisi keuangan merupakan faktor dominan dalam risiko dropout.
 
