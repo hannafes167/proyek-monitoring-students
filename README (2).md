@@ -26,65 +26,44 @@ Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar un
 ### Persiapan
 
 Sumber data: Dataset berasal dari sumber terbuka dengan judul "Students Performance" Dataset ini memuat berbagai informasi akademik dan demografis mahasiswa.
+Link dataset: https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/README.md 
 
 Setup environment:
 ```
-- Python: pandas, scikit-learn, matplotlib, seaborn, joblib
-
-- Google Colab: pemrosesan data & pelatihan model
-
-- Streamlit: prototipe sistem prediksi
-
-- Looker Studio: visualisasi dashboard interaktif
-
-
+conda create --name dropout-predictor python=3.9
+conda activate dropout-predictor
+pip install -r requirements.txt
 ```
 
 ## Business Dashboard
 Business dashboard dibuat untuk membantu tim akademik dan manajemen dalam memantau kondisi mahasiswa dan mempermudah deteksi dini risiko dropout.
 
 **Fitur-fitur dashboard antara lain:**
-- Jumlah total mahasiswa
-- Jumlah mahasiswa berdasarkan status: Dropout, Enrolled, Graduate
-- Persentase dropout
-- Berdasarkan status pembayaran kuliah
-- Berdasarkan nilai saat penerimaan (admission grade)
-- Berdasarkan usia saat masuk
-- Berdasarkan nilai kurikulum semester 1 dan 2
-- Berdasarkan kualifikasi pendidikan sebelumnya
-  
+- Komposisi status mahasiswa (Enrolled, Graduate, Dropout)
+- Distribusi usia dan nilai terhadap status mahasiswa
+- Korelasi antara faktor keuangan, nilai semester awal, dan risiko dropout
+- Visualisasi multivariat: perbandingan antar fitur terhadap target status
 [Link Dashboard Looker Studio (https://lookerstudio.google.com/reporting/4b31e782-cb8d-41ef-8363-4cde65037501)]
 
 ## Menjalankan Sistem Machine Learning
 Sistem klasifikasi ini dibangun menggunakan algoritma Random Forest. Model dilatih menggunakan fitur terpilih seperti nilai akademik, latar belakang sosial, dan status keuangan mahasiswa untuk memprediksi risiko dropout.
 
-1. Memastikan Python dan pustaka berikut sudah terpasang:
+1. Membuka terminal atau command prompt
 
- ```
-pip install pandas scikit-learn joblib
-```
-2. di environment Python lokal atau Colab.
+2. Menjalankan perintah berikut:
+   ```
+   streamlit run predict.py
+   ```
+   Aplikasi streamlit sudah dideploy dan bisa diakses melalui:
+   (https://proyek-monitoring-students-7qcnfjyxcus2wd5csaxy7u.streamlit.app/)
    
-3. Implementasikan ke Streamlit untuk pengujian berbasis web.
-   
-4. Gunakan output dashboard_data.csv sebagai sumber data untuk dashboard Looker Studio.
-
-[Link Prototype (https://colab.research.google.com/drive/1XtH37fgp-T1WdC_feIlttKv-9G0n-Su3?usp=sharing)]
-
-## Streamlit
-Untuk memudahkan eksplorasi hasil model machine learning yang telah dikembangkan, kami menyediakan aplikasi interaktif berbasis Streamlit. Aplikasi ini memungkinkan pengguna untuk:
-
-Melakukan prediksi kemungkinan mahasiswa dropout
-
-Melihat fitur-fitur yang paling berpengaruh terhadap dropout
-
-Mengunduh hasil prediksi dalam format yang dapat digunakan lebih lanjut
-
-Silakan akses aplikasi melalui tautan berikut: (https://proyek-monitoring-students-7qcnfjyxcus2wd5csaxy7u.streamlit.app/)
+   Notebook colab uktuk eksplorasi
+   (https://colab.research.google.com/drive/1XtH37fgp-T1WdC_feIlttKv-9G0n-Su3?usp=sharing)
 
 ## Conclusion
-Proyek ini berhasil membangun sistem prediksi mahasiswa dropout menggunakan machine learning serta mengembangkan dashboard interaktif untuk pemantauan kondisi mahasiswa. Hasil analisis menunjukkan bahwa nilai akademik dan kondisi keuangan merupakan faktor dominan dalam risiko dropout.
+Sistem berhasil mengidentifikasi mahasiswa yang berisiko dropout berdasarkan fitur-fitur utama seperti nilai semester awal, usia saat masuk, dan kondisi keuangan. Aplikasi prototipe berbasis Streamlit dan Looker Studio telah dibangun untuk membantu manajemen institusi dalam proses monitoring dan pengambilan keputusan berbasis data.
 
 ### Rekomendasi Action Items
-1. Implementasi sistem deteksi dini berbasis data untuk memantau mahasiswa berisiko tinggi dropout, terutama berdasarkan nilai semester awal dan kondisi keluarga.
-2. Pemberian intervensi dan bimbingan akademik secara berkala kepada mahasiswa yang teridentifikasi melalui dashboard dan model machine learning.
+1. Terapkan sistem pemantauan berbasis data untuk mendeteksi risiko dropout sejak dini.
+2. Fokus pada mahasiswa dengan nilai semester awal rendah dan kondisi finansial kurang mendukung.
+3. Sediakan bimbingan akademik rutin dan pendampingan psikologis pada kelompok mahasiswa yang teridentifikasi berisiko.
