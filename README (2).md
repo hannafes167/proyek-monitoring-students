@@ -26,13 +26,15 @@ Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar un
 ### Persiapan
 
 Sumber data: Dataset berasal dari sumber terbuka dengan judul "Students Performance" Dataset ini memuat berbagai informasi akademik dan demografis mahasiswa.
+
 Link dataset: https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/README.md 
 
 Setup environment:
 ```
-conda create --name dropout-predictor python=3.9
-conda activate dropout-predictor
+conda create --name main-ds python=3.11.5
+conda activate main-ds
 pip install -r requirements.txt
+
 ```
 
 ## Business Dashboard
@@ -48,7 +50,7 @@ Business dashboard dibuat untuk membantu tim akademik dan manajemen dalam memant
 ## Menjalankan Sistem Machine Learning
 Sistem klasifikasi ini dibangun menggunakan algoritma Random Forest. Model dilatih menggunakan fitur terpilih seperti nilai akademik, latar belakang sosial, dan status keuangan mahasiswa untuk memprediksi risiko dropout.
 
-1. Membuka terminal atau command prompt
+1. Membuka terminal anaconda
 
 2. Menjalankan perintah berikut:
    ```
